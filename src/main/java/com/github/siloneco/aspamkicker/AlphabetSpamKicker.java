@@ -51,6 +51,9 @@ public class AlphabetSpamKicker extends JavaPlugin implements Listener {
         if (!isHalfAlphanumeric(msg, config.isIncludeNumber())) {
             return;
         }
+        if (p.hasPermission("alphabetspamkicker.exempt")) {
+            return;
+        }
 
         int amount = violationCounter.getOrDefault(p.getUniqueId(), 0) + 1;
         violationCounter.put(p.getUniqueId(), amount);

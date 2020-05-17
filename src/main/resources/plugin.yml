@@ -3,3 +3,6 @@ main: com.github.siloneco.aspamkicker.AlphabetSpamKicker
 version: ${project.version}
 author: siloneco
 description: ${project.description}
+permissions:
+  alphabetspamkicker.exempt:
+    default: op
